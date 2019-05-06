@@ -28,6 +28,8 @@
         </div>
     </div>
 
+    {{-- https://devmarketer.io/learn/setup-laravel-project-cloned-github-com/ --}}
+
     <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'article-ckeditor' );
