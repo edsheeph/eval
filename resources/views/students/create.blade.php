@@ -30,54 +30,54 @@
         <div class="form-row">
             <div class="col-4">
                 <div class="form-group">
-                    {{Form::label('first_name', 'First Name')}}
-                    {{Form::text('first_name', '', ['class' => 'form-control', 'placeholder' => 'First Name'])}}
+                {{Form::label('first_name', 'First Name')}}
+                {{Form::text('first_name', '', ['class' => 'form-control', 'placeholder' => 'First Name'])}}
                 </div>
             </div>
             <div class="col-4">
                 <div class="form-group">
-                    {{Form::label('middle_name', 'Middle Name')}}
-                    {{Form::text('middle_name', '', ['class' => 'form-control', 'placeholder' => 'Middle Name'])}}
+                {{Form::label('middle_name', 'Middle Name')}}
+                {{Form::text('middle_name', '', ['class' => 'form-control', 'placeholder' => 'Middle Name'])}}
                 </div>
             </div>
             <div class="col-4">
                 <div class="form-group">
-                    {{Form::label('last_name', 'Last Name')}}
-                    {{Form::text('last_name', '', ['class' => 'form-control', 'placeholder' => 'Last Name'])}}
+                {{Form::label('last_name', 'Last Name')}}
+                {{Form::text('last_name', '', ['class' => 'form-control', 'placeholder' => 'Last Name'])}}
                 </div>
             </div>
         </div> 
         <div class="form-row">
             <div class="col-4">
                 <div class="form-group">
-                    {{Form::label('gender', 'Gender')}}
-                    {{Form::text('gender', '', ['class' => 'form-control', 'placeholder' => 'Gender'])}}
+                {{Form::label('gender', 'Gender')}}
+                {{Form::select('gender', array('P' => 'Select Gender', 'Male' => 'Male', 'Female' => 'Female'), 'P', ['class' => 'form-control'])}}
                 </div>
             </div>
             <div class="col-8">
                 <div class="form-group">
-                    {{Form::label('address', 'Address')}}
-                    {{Form::text('address', '', ['class' => 'form-control', 'placeholder' => 'Address'])}}
+                {{Form::label('address', 'Address')}}
+                {{Form::text('address', '', ['class' => 'form-control', 'placeholder' => 'Address'])}}
                 </div>
             </div>
         </div>
         <div class="form-row">
             <div class="col-4">
                 <div class="form-group">
-                    {{Form::label('number', 'Contact Number')}}
-                    {{Form::number('number', '', ['class' => 'form-control', 'placeholder' => 'Contact Number'])}}
+                {{Form::label('number', 'Contact Number')}}
+                {{Form::number('number', '', ['class' => 'form-control', 'placeholder' => 'Contact Number'])}}
                 </div>
             </div>
             <div class="col-4">
                 <div class="form-group">
-                    {{Form::label('birth_date', 'Birthday')}}
-                    {{Form::date('birth_date', '', ['class' => 'form-control', 'placeholder' => 'Birthday'])}}
+                {{Form::label('birth_date', 'Birthday')}}
+                {{Form::date('birth_date', '', ['class' => 'form-control', 'placeholder' => 'Birthday'])}}
                 </div>
             </div>
             <div class="col-4">
                 <div class="form-group">
-                    {{Form::label('age', 'Age')}}
-                    {{Form::text('age', '', ['class' => 'form-control', 'placeholder' => 'Age'])}}
+                {{Form::label('age', 'Age')}}
+                {{Form::text('age', '', ['class' => 'form-control', 'placeholder' => 'Age'])}}
                 </div>
             </div>
         </div> 
