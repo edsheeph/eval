@@ -9,26 +9,40 @@
 
 <hr>
 
-<div class="row mx-auto">
+<div class="card rounded-0">
+    <div class="card-header"><b>STUDENT LISTS</b></div>
+    <div class="card-body">
+        <table class="table table-borderless table-hover">
 
-@if(count($students) >= 1)
-    @foreach($students as $student)
-    <div class="col-4">
-        <div class="card my-3">
-        <div class="card-header"><div class="d-flex justify-content-end"><a href="/students/{{$student->id}}" class="btn btn-primary btn-sm">View</a></div></div>
-            <div class="card-body">
-                <p>Student Number: {{$student->id}}</p>
-                <p>Name: {{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</p>
-            </div>
-        </div> 
-    </div>         
-        
-    @endforeach
-    {{-- {{$posts->links()}} --}}
-@else
-    <p>No Students found</p>
-@endif
+            <thead class="thead-dark">
+                <tr class="text-center"> 
+                    <th>Student Number</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
 
+            @if(count($students) >= 1)
+                @foreach($students as $student)
+
+                <tr class="text-center">
+                    <td>{{$student->id}}</td>
+                    <td>{{$student->first_name}}</td>
+                    <td>{{$student->middle_name}}</td>
+                    <td>{{$student->last_name}}</td>
+                    <td><a href="/students/{{$student->id}}" class="btn btn-dark btn-sm">View</a></td>
+                </tr>
+                
+                @endforeach
+                {{-- {{$posts->links()}} --}}
+            @else
+                <p>No Students found</p>
+            @endif
+
+        </table>
+    </div>
 </div>
 
 @endsection
