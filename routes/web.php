@@ -40,3 +40,5 @@ Auth::routes();
 // Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::resource('students', 'StudentController');
+
+Route::get('students/generatePDF/{id}','StudentController@generatePDF');

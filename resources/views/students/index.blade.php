@@ -32,7 +32,8 @@
                     <td>{{$student->first_name}}</td>
                     <td>{{$student->middle_name}}</td>
                     <td>{{$student->last_name}}</td>
-                    <td><a href="/students/{{$student->id}}" class="btn btn-dark btn-sm">View</a></td>
+                    <td><a href="/students/{{$student->id}}" class="btn btn-dark btn-sm">View</a>
+                        <a href="{{url('students/generatePDF/' . $student->id)}}" class="btn btn-danger btn-sm">Export To PDF</a></td>
                 </tr>
                 
                 @endforeach

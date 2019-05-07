@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Student;
 use App\Gender;
+use PDF;
 use DB;
 
 class StudentController extends Controller
@@ -145,5 +146,15 @@ class StudentController extends Controller
         $student = Student::find($id);
         $student->delete();
         return redirect('/students')->with('success', 'Successfully Removed');
+    }
+
+    public function generatePDF($id)
+    {
+        $student = Student::find($id);
+        $pdf = PDF::loadView('students.pdf', ['students' => $student])->setPaper('a4', 'portrait');
+  
+        return $pdf->download('student.pdf');
+        // $fileName = $student->last_name;
+        // return $pdf->stream($fileName . '.pdf');
     }
 }
