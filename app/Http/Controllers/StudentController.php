@@ -153,8 +153,8 @@ class StudentController extends Controller
         $student = Student::find($id);
         $pdf = PDF::loadView('students.pdf', ['students' => $student])->setPaper('a4', 'portrait');
   
-        return $pdf->download('student.pdf');
-        // $fileName = $student->last_name;
-        // return $pdf->stream($fileName . '.pdf');
+        // return $pdf->download('student.pdf');
+        $fileName = $student->last_name;
+        return $pdf->download($fileName . '.pdf');
     }
 }

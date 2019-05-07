@@ -4,23 +4,19 @@
 
 {{-- https://github.com/barryvdh/laravel-dompdf/issues/269 --}}
 
-<table class="table table-borderless table-hover">
+<div class="card my-3">
+    <div class="card-body">
 
-    <thead class="thead-dark">
-        <tr class="text-center"> 
-            <th>Student Number</th>
-            <th>First Name</th>
-            <th>Middle Name</th>
-            <th>Last Name</th>
-        </tr>
-    </thead>
-        <tr class="text-center">
-            <td>{{$students->id}}</td>
-            <td>{{$students->first_name}}</td>
-            <td>{{$students->middle_name}}</td>
-            <td>{{$students->last_name}}</td>
-        </tr>
-
-</table>
+        <h1 class="text-center">Student Info</h1>
+        <p>Student Number: {{$students->id}}</p>
+        <p>Name: {{$students->first_name}} {{$students->middle_name}} {{$students->last_name}}</p>
+        <p>Gender: {{$students->gender}}</p>
+        <p>Address: {{$students->address}}</p>
+        <p>Contact Number: {{$students->number}}</p>
+        <p>Birthday: {{$students->birth_date}}</p>
+        <p>Age: {{$students->age}}</p>
+        
+    </div>
+</div>  
 
 @endsection
