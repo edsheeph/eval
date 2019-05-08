@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Student;
 use App\Gender;
+use App\Exports\StudentExport;
+use App\Imports\StudentImport;
+use Maatwebsite\Excel\Facades\Excel;
 use PDF;
 use DB;
 
@@ -156,5 +159,32 @@ class StudentController extends Controller
         $fileName = $student->last_name;
         return $pdf->download($fileName . '.pdf');
         // return $pdf->download('student.pdf');
+    }
+
+    public function export()
+    {
+        return Excel::download(new StudentExport(), 'list of students.xlsx');
+    }
+
+    public function import(Request $request)
+    {
+        $students = Excel::toCollection(new StudentImport(), $request->file('import_file'));
+        foreach($students[0] as $student)
+        {
+            Student::where('id', $student[0])->update
+            ([
+                'last_name' => $student[1],
+                'first_name' => $student[2],
+                'middle_name' => $student[3],
+                'gender' => $student[4],
+                'address' => $student[5],
+                'number' => $student[6],
+                'birth_date' => $student[7],
+                'age' => $student[8],
+            ]);
+        }
+        return redirect()->route('students.index');
+        // Excel::import(new StudentImport, $request->file('import_file'));
+        // return back();
     }
 }

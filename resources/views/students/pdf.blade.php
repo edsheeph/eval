@@ -2,8 +2,7 @@
 
 @section('content')
 
-{{-- https://github.com/barryvdh/laravel-dompdf/issues/269 --}}
-
+<div class="container">
 <div class="card my-3">
     <div class="card-body">
 
@@ -18,5 +17,5 @@
         
     </div>
 </div>  
-
+</div>
 @endsection

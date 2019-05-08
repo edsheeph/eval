@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="container">
 <a href="/students" class="btn btn-dark">Go Back</a>
 <div class="card my-3">
     <div class="card-body">
@@ -28,5 +28,5 @@
 {!! Form::close() !!}
 
 </div>
-
+</div>
 @endsection

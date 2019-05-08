@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="container">
 <a href="/posts" class="btn btn-dark">Go Back</a>
 <div class="card my-3">
     <div class="card-header pb-1"><h3>{{$post->title}}</h3></div>
@@ -24,5 +24,5 @@
 {!! Form::close() !!}
 
 </div>
-
+</div>
 @endsection

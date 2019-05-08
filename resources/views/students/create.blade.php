@@ -21,7 +21,7 @@
         });
     });
 </script>
-
+<div class="container">
 <a href="/students" class="btn btn-dark mb-3">Go Back</a>
 <div class="card">
     <div class="card-header pb-1"><h4>Add Student</h4></div>
@@ -85,6 +85,6 @@
     {!! Form::close() !!}
     </div>
 </div>
-
+</div>
          
 @endsection

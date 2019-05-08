@@ -2,6 +2,8 @@
 
 @section('content')
 
+<hr>
+
 <div class="d-flex justify-content-between">
     <h1>Dashboard</h1>
     <a href="/students/create" class="btn btn-success pt-3">Add Student</a>
@@ -9,9 +11,23 @@
 
 <hr>
 
+<form action=" {{route('import')}} " method="POST" enctype="multipart/form-data">
+    <div class="d-flex">
+        @csrf
+        {{-- <input type="hidden" name="_token" value="{{ CSRF_Token() }}"> --}}
+        <input type="file" name="import_file" class="form-control">
+        <input type="submit" value="Upload" class="btn btn-info">
+    </div>
+
+</form>
+
+<hr>
+
 <div class="card rounded-0">
-    <div class="card-header"><b>STUDENT LISTS</b></div>
+    <div class="card-header d-flex justify-content-between">
+        <b class="pt-2">STUDENT LISTS</b><a href="{{ route('export') }}" class="btn btn-primary">Export to XLSX</a></div>
     <div class="card-body">
+
         <table class="table table-borderless table-hover">
 
             <thead class="thead-dark">

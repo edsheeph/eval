@@ -42,3 +42,6 @@ Auth::routes();
 Route::resource('students', 'StudentController');
 
 Route::get('students/generatePDF/{id}','StudentController@generatePDF');
+
+Route::get('/export','StudentController@export')->name('export');
+Route::post('/import','StudentController@import')->name('import');

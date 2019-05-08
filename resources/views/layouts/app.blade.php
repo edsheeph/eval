@@ -15,12 +15,14 @@
 
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
 </head>
 <body>
     <div id="app">
         
         @include('inc.navbar')
-        <div class="container">
+        <div class="">
             <main class="py-4">
                 @include('inc.messages')
                 @yield('content')
@@ -39,5 +41,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
+    <script>
+        window.sr = ScrollReveal();
+        // sr.reveal('.navbar', {
+        //     duration: 2000,
+        //     origin:'bottom'
+        // });
+        sr.reveal('.showcase-left', {
+            duration: 2000,
+            origin:'top',
+            distance:'300px'
+        });
+        sr.reveal('.showcase-right', {
+            duration: 2000,
+            origin:'right',
+            distance:'300px'
+        });
+        sr.reveal('.showcase-btn', {
+            duration: 2000,
+            delay: 2000,
+            origin:'bottom'
+        });
+        sr.reveal('#testimonial div', {
+            duration: 2000,
+            origin:'bottom'
+        });
+        sr.reveal('.info-left', {
+            duration: 2000,
+            origin:'left',
+            distance:'300px',
+            viewFactor: 0.2
+        });
+        sr.reveal('.info-right', {
+            duration: 2000,
+            origin:'right',
+            distance:'300px',
+            viewFactor: 0.2
+        });
+    </script>
+
 </body>
 </html>

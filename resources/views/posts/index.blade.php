@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="container">
 <div class="d-flex justify-content-between">
     <h1>Posts</h1>
     <a href="/posts/create" class="btn btn-success pt-3">Create Post</a>
@@ -20,5 +20,5 @@
 @else
     <p>No posts found</p>
 @endif
-
+</div>
 @endsection
