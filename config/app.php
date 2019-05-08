@@ -165,6 +165,7 @@ return [
         Unisharp\Ckeditor\ServiceProvider::class,
         LynX39\LaraPdfMerger\PdfMergerServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -233,6 +234,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'PdfMerger' => LynX39\LaraPdfMerger\Facades\PdfMerger::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
 
     ],
 

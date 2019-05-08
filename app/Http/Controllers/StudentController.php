@@ -8,6 +8,7 @@ use App\Gender;
 use App\Exports\StudentExport;
 use App\Imports\StudentImport;
 use Maatwebsite\Excel\Facades\Excel;
+use Alert;
 use PDF;
 use DB;
 
@@ -73,6 +74,8 @@ class StudentController extends Controller
         $student->number = $request->input('number');
         $student->birth_date = $request->input('birth_date');
         $student->age = $request->input('age');
+
+        alert()->success('Successfully Added');
         
         $student->save();
 
@@ -100,6 +103,7 @@ class StudentController extends Controller
     public function edit($id)
     {
         $student = Student::find($id);
+        alert()->success('Successfully Updated');
         return view('students.edit')->with('student', $student);
     }
 
