@@ -178,7 +178,7 @@ class PostsController extends Controller
 
         if($post->cover_image != 'noimage.jpg')
         {
-            // Delete Image
+            // Delete Image on storage
             Storage::delete('public/cover_images/'.$post->cover_image);
         }
 
