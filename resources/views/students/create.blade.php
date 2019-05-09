@@ -22,7 +22,7 @@
     });
 </script>
 <div class="container">
-<a href="/students" class="btn btn-dark mb-3">Go Back</a>
+<a href="/students" class="btn btn-dark mb-3 rounded-0">Go Back</a>
 <div class="card rounded-0 showcase-left">
     <div class="card-header pb-1"><h4>Add Student</h4></div>
     <div class="card-body">
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div> 
-        {{Form::submit('Submit', ['class' => 'btn btn-success px-3'])}}   
+        {{Form::submit('Submit', ['class' => 'btn btn-success rounded-0 px-3'])}}   
     {!! Form::close() !!}
     </div>
 </div>
