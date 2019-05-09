@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container">
-<a href="/posts" class="btn btn-dark mb-3">Go Back</a>
-<div class="card">
-    <div class="card-header pb-1"><h1>Create Post</h1></div>
+<a href="/posts" class="btn btn-dark mb-3 rounded-0">Go Back</a>
+<div class="card rounded-0">
+    <div class="card-header"><b>Create Post</b></div>
     <div class="card-body">
         {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!} 
             <div class="form-group">
@@ -15,7 +15,7 @@
                 {{Form::label('body', 'Body')}}
                 {{Form::textarea('body', '', ['class' => 'form-control', 'placeholder' => 'Body'])}}
             </div>
-            {{Form::submit('Post', ['class' => 'btn btn-primary px-3'])}}
+            {{Form::submit('Post', ['class' => 'btn btn-primary rounded-0 px-3'])}}
         {!! Form::close() !!}
     </div>
 </div>

@@ -47,10 +47,10 @@
         
     <script>
         window.sr = ScrollReveal();
-        // sr.reveal('.navbar', {
-        //     duration: 2000,
-        //     origin:'bottom'
-        // });
+        sr.reveal('.showcase-bottom', {
+            duration: 2000,
+            origin:'bottom'
+        });
         sr.reveal('.showcase-left', {
             duration: 2000,
             origin:'top',

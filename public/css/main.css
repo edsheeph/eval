@@ -79,4 +79,20 @@ footer{
 padding:30px;
 }
 
+.blog-post-container{
+    transition: transform .9s;
+}
 
+.blog-post-container:hover{
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.1); 
+}
+
+.blog-post-container a{
+    color: #000 !important;
+}
+
+a:hover{
+    text-decoration: none;
+}
