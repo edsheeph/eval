@@ -21,14 +21,12 @@
 
 </head>
 <body>
-    <div id="app">
-        @include('inc.navbar')
-        <div class="">
-            <main class="py-4">
-                {{-- @include('inc.messages') --}}
-                @yield('content')
-            </main>
-        </div>
+    @include('inc.navbar')
+    <div class="">
+        <main class="py-4">
+            {{-- @include('inc.messages') --}}
+            @yield('content')
+        </main>
     </div>
 
     {{-- https://devmarketer.io/learn/setup-laravel-project-cloned-github-com/ --}}

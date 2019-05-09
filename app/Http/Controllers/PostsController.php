@@ -10,6 +10,15 @@ use DB;
 class PostsController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -80,6 +89,11 @@ class PostsController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
+        if(auth()->user()->id !== $post->user_id)
+        {
+            alert()->error('Error Message', 'Unauthorized Page')->persistent('Close');
+            return redirect('/posts');
+        }
         return view('posts.edit')->with('post', $post);
     }
 
@@ -115,6 +129,11 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        if(auth()->user()->id !== $post->user_id)
+        {
+            alert()->error('Error Message', 'Unauthorized Page')->persistent('Close');
+            return redirect('/posts');
+        }
         $post->delete();
         return redirect('/blog')->with('success', 'Post Removed');
     }

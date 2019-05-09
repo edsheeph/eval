@@ -22,8 +22,6 @@ Route::get('/about', 'PagesController@about');
 
 Route::get('/services', 'PagesController@services');
 
-Route::get('/blog', 'PagesController@blog');
-
 Route::resource('posts', 'PostsController');
 
 // Route::get('/about', function(){
@@ -42,6 +40,8 @@ Auth::routes();
 // Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 Route::resource('students', 'StudentController');
+
+Route::get('/blog', 'BlogsController@blog');
 
 Route::get('students/generatePDF/{id}','StudentController@generatePDF');
 

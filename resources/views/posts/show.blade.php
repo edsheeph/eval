@@ -16,13 +16,16 @@
 
 <div class="d-flex justify-content-end">
 
-{{-- <a href="/posts/{{$post->id}}/edit" class="btn btn-primary mr-3">Edit</a> --}}
-{{-- <a href="/posts/{{$post->id}}/delete" class="btn btn-danger">Delete</a>   --}}
+@if(!Auth::guest())
+    @if(Auth::user()->id == $post->user_id)
+    <a href="/posts/{{$post->id}}/edit" class="btn btn-primary px-4 rounded-0 mr-3">Edit</a>
 
-{{-- {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST']) !!}
-    {{Form::hidden('_method', 'DELETE')}}
-    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
-{!! Form::close() !!} --}}
+    {!! Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST']) !!}
+        {{Form::hidden('_method', 'DELETE')}}
+        {{Form::submit('Delete', ['class' => 'btn btn-danger px-3 rounded-0'])}}
+    {!! Form::close() !!}
+    @endif
+@endif
 
 </div>
 </div>

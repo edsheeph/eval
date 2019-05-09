@@ -27,11 +27,4 @@ class PagesController extends Controller
         return view('pages.services')->with($data);
     }
 
-    public function blog(){
-        // return view('pages.index');
-        $user_id = auth()->user()->id;
-        $user = User::find($user_id);
-        return view('pages.blog')->with('posts', $user->posts);
-    }
-
 }
