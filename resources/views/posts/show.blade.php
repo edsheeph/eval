@@ -6,7 +6,14 @@
 <div class="card my-3 rounded-0">
     <div class="card-header pb-1"><h3>{{$post->title}}</h3></div>
     <div class="card-body">
-        <p>{{$post->body}}</p>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/storage/cover_images/{{$post->cover_image}}" class="img-fluid" alt="Responsive image">
+            </div>
+            <div class="col-md-8">
+                <p>{{$post->body}}</p>
+            </div>
+        </div>
         <div class="d-flex justify-content-between">
             <small>Date Created: {{$post->created_at}}</small>
             <small>by {{$post->user->name}}</small>
