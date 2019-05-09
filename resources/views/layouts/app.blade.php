@@ -20,7 +20,6 @@
 </head>
 <body>
     <div id="app">
-        
         @include('inc.navbar')
         <div class="">
             <main class="py-4">

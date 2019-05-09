@@ -23,12 +23,12 @@
 
 <hr>
 
-<div class="card rounded-0">
+<div class="card rounded-0 showcase-right">
     <div class="card-header d-flex justify-content-between">
         <b class="pt-2">STUDENT LISTS</b><a href="{{ route('export') }}" class="btn btn-primary">Export to XLSX</a></div>
     <div class="card-body">
 
-        <table class="table table-borderless table-hover">
+        <table class="table table-borderless table-hover showcase">
 
             <thead class="thead-dark">
                 <tr class="text-center"> 

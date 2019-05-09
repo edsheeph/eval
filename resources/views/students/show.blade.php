@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 <a href="/students" class="btn btn-dark">Go Back</a>
-<div class="card my-3">
+<div class="card my-3 info-left">
     <div class="card-body">
         <p>Name: {{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</p>
         <p>Gender: {{$student->gender}}</p>

@@ -29,7 +29,7 @@
 </script>
 <div class="container">
 <a href="/students" class="btn btn-dark mb-3">Go Back</a>
-<div class="card">
+<div class="card rounded-0 info-right">
     <div class="card-header pb-1"><h1>Add Student</h1></div>
     <div class="card-body">
         {!! Form::open(['action' => ['StudentController@update', $student->id], 'method' => 'POST']) !!} 

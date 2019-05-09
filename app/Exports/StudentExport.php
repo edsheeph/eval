@@ -33,4 +33,20 @@ class StudentExport implements FromCollection, WithHeadings, WithMapping
             'Age',
         ];
     }
+
+    public function map($student): array
+    {
+        return [
+            $student->id,
+            strtoupper($student->last_name),
+            // '=UPPER(B2:B24)',
+            strtoupper($student->first_name),
+            strtoupper($student->middle_name),
+            ucfirst(trans($student->gender)),
+            $student->address,
+            $student->number,
+            date("F j, Y", strtotime($student->birth_date)),
+            $student->age,
+        ];
+    }
 }
