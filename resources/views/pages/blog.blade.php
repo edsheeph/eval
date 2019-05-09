@@ -4,7 +4,7 @@
 <div class="container">
     
     <div class="card rounded-0 showcase-bottom">
-        <div class="card-header d-flex justify-content-between"><b class="pt-2">YOUR BLOG POSTS</b><a href="/posts/create" class="btn btn-success rounded-0">Create Post</a></div>
+        <div class="card-header d-flex justify-content-between"><b class="pt-2">YOUR BLOG POST(S)</b><a href="/posts/create" class="btn btn-success rounded-0">Create Post</a></div>
         <div class="card-body">
             @if(count($posts) > 0)
                 <table class="table table-hover table-borderless">

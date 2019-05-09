@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Alert;
 use DB;
 
 class PostsController extends Controller
@@ -51,9 +52,10 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        alert()->success('Success Message', 'Post Created');
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Created');
+        return redirect('/blog');
     }
 
     /**
@@ -98,9 +100,10 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        alert()->success('Success Message', 'Post Updated');
         $post->save();
 
-        return redirect('/posts')->with('success', 'Post Updated');
+        return redirect('/blog');
     }
 
     /**
@@ -113,6 +116,6 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         $post->delete();
-        return redirect('/posts')->with('success', 'Post Removed');
+        return redirect('/blog')->with('success', 'Post Removed');
     }
 }

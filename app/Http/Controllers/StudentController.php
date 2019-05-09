@@ -75,11 +75,11 @@ class StudentController extends Controller
         $student->birth_date = $request->input('birth_date');
         $student->age = $request->input('age');
 
-        alert()->success('Successfully Added');
+        alert()->success('Success Message', 'Successfully Added');
         
         $student->save();
 
-        return redirect('/students')->with('success', 'Successfully Added');
+        return redirect('/students');
     }
 
     /**
@@ -103,7 +103,6 @@ class StudentController extends Controller
     public function edit($id)
     {
         $student = Student::find($id);
-        alert()->success('Successfully Updated');
         return view('students.edit')->with('student', $student);
     }
 
@@ -137,9 +136,11 @@ class StudentController extends Controller
         $student->birth_date = $request->input('birth_date');
         $student->age = $request->input('age');
         
+        alert()->success('Success Message', 'Successfully Updated');
+
         $student->save();
 
-        return redirect('/students')->with('success', 'Successfully Update');
+        return redirect('/students');
     }
 
     /**
@@ -187,6 +188,9 @@ class StudentController extends Controller
                 'age' => $student[8],
             ]);
         }
+
+        alert()->success('Success Message', 'Successfully Import');
+
         return redirect()->route('students.index');
         // Excel::import(new StudentImport, $request->file('import_file'));
         // return back();
