@@ -32,7 +32,10 @@ class PostsController extends Controller
         // $posts = DB::select('SELECT * FROM posts');
         // $posts = Post::orderBy('title', 'desc')->take(2)->get();
         // $posts = Post::orderBy('title', 'asc')->paginate(1);
-        return view('posts.index')->with('posts', $posts);
+        // return view('posts.index')->with('posts', $posts);
+
+        // return view('posts.index', ['posts' => $posts]);
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -99,7 +102,9 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         // $post = Post::orderBy('title', 'asc')->get();
-        return view('posts.show')->with('post', $post);
+        // return view('posts.show')->with('post', $post);
+        // return view('posts.show', ['post' => $post]);
+        return view('posts.show', compact('post'));
     }
 
     /**
@@ -134,6 +139,7 @@ class PostsController extends Controller
             'cover_image' => 'image|nullable|max:1999'
         ]);
 
+        //Make Storage:Link
         if($request->hasFile('cover_image'))
         {
             // File name with extension

@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <div class="showcase-left">
-              <img src="images/bag.jpg">
+              <img src="images/ironmanChibi.jpg">
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
@@ -34,15 +34,15 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <div class="info-left">
-              <img src="images/bag2cute.jpg">
+              <img src="images/avengers1.png" class="img-fluid">
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
             <div class="info-right">
               <h2>Get To Know Google Home</h2>
               <p>Adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-              <br>
-              <a class="btn btn-outline-dark btn-lg showcase-btn">Read More</a>
+              {{-- <br>
+              <a class="btn btn-outline-dark btn-lg showcase-btn">Read More</a> --}}
             </div>
           </div>
         </div>

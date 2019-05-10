@@ -6,13 +6,12 @@
 <div class="card rounded-0 my-3 info-left">
     <div class="card-header pb-2"><b class="font-weight-bold">STUDENT INFO</b></div>
     <div class="card-body">
-        <p>Name: {{$student->first_name}} {{$student->middle_name}} {{$student->last_name}}</p>
+        <p>Name: {{$student->first_name}} {{substr($student->middle_name, 0, 1)}}. {{$student->last_name}}</p>
         <p>Gender: {{$student->gender}}</p>
         <p>Address: {{$student->address}}</p>
         <p>Contact Number: {{$student->number}}</p>
         <p>Birthday: {{$student->birth_date}}</p>
         <p>Age: {{$student->age}}</p>
-        
     </div>
 </div>  
 

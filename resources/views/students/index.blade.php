@@ -34,7 +34,7 @@
                 <tr class="text-center"> 
                     <th>Student Number</th>
                     <th>First Name</th>
-                    <th>Middle Name</th>
+                    <th>Middle Initial</th>
                     <th>Last Name</th>
                     <th>Action</th>
                 </tr>
@@ -46,7 +46,7 @@
                 <tr class="text-center">
                     <td>{{$student->id}}</td>
                     <td>{{$student->first_name}}</td>
-                    <td>{{$student->middle_name}}</td>
+                    <td>{{substr($student->middle_name, 0, 1)}}.</td>
                     <td>{{$student->last_name}}</td>
                     <td><a href="/students/{{$student->id}}" class="btn btn-dark btn-sm rounded-0">View</a>
                         <a href="{{url('students/generatePDF/' . $student->id)}}" class="btn btn-danger btn-sm rounded-0">Export To PDF</a></td>

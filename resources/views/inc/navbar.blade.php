@@ -12,14 +12,16 @@
         </div>
     </nav> --}}
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light p-3 mb-5 bg-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="d-flex justify-content-between">
+                <a class="navbar-brand font-italic" href="{{ url('/') }}">
+                    <img src="/images/logo.png" width="15%"> {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
@@ -29,16 +31,16 @@
 
                 <ul class="nav navbar-nav">
                     <li class="{{Request::is('/') ? 'active' : ''}}">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link font-weight-bold" href="/">Home</a>
                     </li>
                     <li class="{{Request::is('about') ? 'active' : ''}}">
-                        <a class="nav-link" href="/about">About</a>
+                        <a class="nav-link font-weight-bold" href="/about">About</a>
                     </li>
                     <li class="{{Request::is('services') ? 'active' : ''}}">
-                        <a class="nav-link" href="/services">Services</a>
+                        <a class="nav-link font-weight-bold" href="/services">Service</a>
                     </li>
                     <li class="{{Request::is('posts') ? 'active' : ''}}">
-                        <a class="nav-link" href="/posts">Blog</a>
+                        <a class="nav-link font-weight-bold" href="/posts">Blog</a>
                     </li>
                 </ul>
 
@@ -56,7 +58,7 @@
                         @endif
                     @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
