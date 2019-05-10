@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <div class="showcase-left">
-              <img src="images/ironmanChibi.jpg">
+              <img src="images/ironmanChibi.jpg" class="img-fluid">
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
